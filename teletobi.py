@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import branca.colormap as cm
 df = pd.read_csv('data/houseprice-with-lonlat.csv')
+df['Exterior_1st'].value_counts()
 num_exterior = df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n',ascending=False)
 
 desc_order = [i for i in num_exterior['Exterior_1st']] 
