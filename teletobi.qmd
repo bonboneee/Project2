@@ -1,0 +1,226 @@
+---
+title: "Ames House"
+author: "4조(텔레토비조)"
+format: 
+  dashboard:
+    logo: "img/teletobi.jpg"
+    nav-buttons:
+      - icon: github
+        href: https://github.com/bonboneee/Project2
+      - text: "김연예진"
+        href: https://yeonyejin.github.io/mywebsite/        
+      - text: "문지윤"
+        href: https://jiyunmoon37.github.io/myportfolio/
+      - text: "유은서"
+        href: https://bonboneee.github.io/mywebsite/
+      - text: "이예솔"
+        href: https://yesolee.github.io/mywebsite/                          
+---
+
+
+# {.sidebar}
+<주제>
+주제선정이유
+
+<목차>
+1.
+2.
+3.
+
+이것은 테스트 문장 입력입니다.
+
+# About
+
+## 첫번째
+![아기돼지 삼형제](img/figs.jpg)
+### 오른쪽
+![아기돼지 삼형제](img/figs.jpg)
+
+## 두번째
+![홍수](img/flood.png)
+### 오른쪽
+![홍수](img/flood.png)
+
+# Analysis
+
+## 첫번째 
+```{python}
+import pandas as pd
+import plotly.express as px
+df = pd.read_csv('data/houseprice-with-lonlat.csv')
+num_exterior = df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n',ascending=False)
+
+desc_order = [i for i in num_exterior['Exterior_1st']] 
+fig = px.histogram(df, x='Year_Built', color='Exterior_1st',
+                   title="연도별 외강재 소재 분포",
+                   labels={"Exterior_1st":"외강재 소재"},
+                   category_orders={"Exterior_1st": desc_order},
+                   barmode='stack')
+fig.update_xaxes(dtick=1)
+```
+
+### TOP7 소재 설명 {.tabset}
+::: {.card title="VinylSd"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="MetalSd"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="Wd Sdng"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="HdBoard"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="Plywood"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="CemntBd"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+::: {.card title="BrkFace"}
+카드안에 들어있는 텍스트 입니다.
+![](img/teletobi.jpg)
+:::
+
+
+## 두번째
+```{python}
+color_map = {ext: 'gray' if ext in desc_order[7:] else px.colors.qualitative.Plotly[i] for i, ext in enumerate(desc_order)}
+
+df['color'] = df['Exterior_1st'].apply(lambda x: color_map.get(x))
+
+fig = px.histogram(df, x='Year_Built', color='Exterior_1st',
+                   title="연도별 전체 TOP7",
+                   labels={"Exterior_1st":"외장재 소재"},
+                   category_orders={"Exterior_1st": desc_order},
+                   barmode='stack',
+                   color_discrete_map=color_map)
+
+fig.update_xaxes(dtick=1)
+
+```
+
+### 오른쪽 외장재 분포 지도
+```{python}
+# import folium
+# import webbrowser
+# from folium.features import DivIcon
+
+# map_house = folium.Map(location=[42.034482,-93.642897],zoom_start=13,tiles='cartodbpositron')
+
+# for i in range(len(df['Longitude'])):
+#     folium.CircleMarker(
+#         [df['Latitude'][i], df['Longitude'][i]],
+#         popup=f"위도: {df['Latitude'][i]}, 경도: {df['Longitude'][i]}, Price: ${df['Sale_Price'][i]}",
+#         radius=df['Sale_Price'][i]/100000,
+#         color=df['color'][i],
+#         fill=True,
+#         fill_color=df['color'][i],
+#         fill_opacity=0.7
+#     ).add_to(map_house)
+
+# colormap = cm.StepColormap(
+#     colors=list(color_map.values()),
+#     caption="Color Legend"
+# )
+# colormap.add_to(map_house)
+# map_house.save('map_house.html')
+```
+
+이 지도는 Ames의 주택 외장재 분포를 보여줍니다. 각 마커는 주택의 위치를 나타내며, 색상은 외장재 종류를 나타냅니다. 마커의 크기는 주택 가격에 비례합니다.
+<iframe src="map_house.html" width="100%" height="600"></iframe>
+
+# Page3
+## 10년 단위 TOP7 외장재
+
+```{python}
+
+# 10년 단위로 데이터 그룹화
+df['Decade'] = (df['Year_Built'] // 10) * 10
+decade_grouped = df.groupby(['Decade', 'Exterior_1st']).size().reset_index(name='count')
+
+# 바 플롯 생성
+fig = px.bar(decade_grouped, x='Decade', y='count', color='Exterior_1st',
+             title="10년 단위 TOP 외장재",
+             labels={"Exterior_1st": "외장재 소재"},
+             category_orders={"Exterior_1st": desc_order},
+             color_discrete_map=color_map)
+fig.show()
+```
+
+## 1990년대
+
+```{python}
+# df2 = df.query("Decade in [1990]")
+# df2 = df2.reset_index(drop=True)
+# import folium
+# map_house2 = folium.Map(location=[42.034482,-93.642897],zoom_start=13,tiles='cartodbpositron')
+
+# for i in range(len(df2['Longitude'])):
+#     folium.CircleMarker(
+#         [df2['Latitude'][i], df2['Longitude'][i]],
+#         popup=f"위도: {df2['Latitude'][i]}, 경도: {df2['Longitude'][i]}, Price: ${df2['Sale_Price'][i]}",
+#         radius=df2['Sale_Price'][i]/100000,
+#         color=df2['color'][i],
+#         fill=True,
+#         fill_color=df2['color'][i],
+#         fill_opacity=0.7
+#     ).add_to(map_house2)
+
+# colormap = cm.StepColormap(
+#     colors=list(color_map.values()),
+#     caption="Color Legend"
+# )
+# colormap.add_to(map_house2)
+# map_house.save('1990.html')
+
+
+
+# df3 = df.query("Decade in [2000]")
+# df3 = df3.reset_index(drop=True)
+# import folium
+# map_house3 = folium.Map(location=[42.034482,-93.642897],zoom_start=13,tiles='cartodbpositron')
+
+# for i in range(len(df3['Longitude'])):
+#     folium.CircleMarker(
+#         [df3['Latitude'][i], df3['Longitude'][i]],
+#         popup=f"위도: {df3['Latitude'][i]}, 경도: {df3['Longitude'][i]}, Price: ${df2['Sale_Price'][i]}",
+#         radius=df2['Sale_Price'][i]/100000,
+#         color=df2['color'][i],
+#         fill=True,
+#         fill_color=df3['color'][i],
+#         fill_opacity=0.7
+#     ).add_to(map_house3)
+
+# colormap = cm.StepColormap(
+#     colors=list(color_map.values()),
+#     caption="Color Legend"
+# )
+# colormap.add_to(map_house3)
+# map_house.save('2000.html')
+
+
+```
+
+1990년대
+<iframe src="1990.html" width="100%" height="600"></iframe>
+
+### 2000년대
+2000년대
+<iframe src="2000.html" width="100%" height="600"></iframe>
+
+
+
+# Conclusion
+
+1. VinylSD에 대한 설명
+
+
+2. Topic : Ames 사람들은 홍수가 벌어짐에 어떤 외장재로 대비하고 있을까?
