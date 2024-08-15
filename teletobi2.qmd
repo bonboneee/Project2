@@ -77,16 +77,60 @@ format:
 ```{python}
 import pandas as pd
 import plotly.express as px
-df = pd.read_csv('data/houseprice-with-lonlat.csv')
-num_exterior = df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n',ascending=False)
 
-desc_order = [i for i in num_exterior['Exterior_1st']] 
-fig = px.histogram(df, x='Year_Built', color='Exterior_1st',
-                   title="연도별 외강재 소재 분포",
-                   labels={"Exterior_1st":"외강재 소재"},
-                   category_orders={"Exterior_1st": desc_order},
-                   barmode='stack')
-fig.update_xaxes(dtick=1, tickangle=90, tickfont=dict(size=5))
+# 데이터 불러오기
+
+df = pd.read_csv('data/houseprice-with-lonlat.csv')
+
+# 연도별 'Exterior_1st' 개수 세기
+
+exterior_distribution = df.groupby(['Year_Built', 'Exterior_1st']).size().reset_index(name='Count')
+
+# 범례 순서 지정
+
+desc_order = [
+'VinylSd',
+'MetalSd',
+'HdBoard',
+'Wd Sdng',
+'Plywood',
+'CemntBd',
+'BrkFace',
+'WdShing',
+'AsbShng',
+'Stucco',
+'BrkComm',
+'AsphShn',
+'Stone',
+'CBlock',
+'ImStucc',
+'PreCast'
+]
+
+# 외장재 소재의 순서를 재정렬
+
+exterior_distribution['Exterior_1st'] = pd.Categorical(exterior_distribution['Exterior_1st'], categories=desc_order, ordered=True)
+exterior_distribution = exterior_distribution.sort_values('Exterior_1st')
+
+# 시각화
+
+fig = px.bar(exterior_distribution,
+x='Year_Built',
+y='Count',
+color='Exterior_1st',
+title='연도별 외장재 소재 분포',
+labels={'Count': '외장재 소재 수', 'Year_Built': '건축 연도'},
+text='Count')
+
+# 그래프 설정
+
+# fig.update_traces(texttemplate='%{text}', textposition='auto')
+fig.update_layout(barmode='stack',
+xaxis_title='건축 연도',
+yaxis_title='외장재 소재 수',
+legend_title='외장재 소재',
+font=dict(family='Malgun Gothic', size=10))
+
 ```
 
 ## 두번째
@@ -290,6 +334,24 @@ fig.show()
 ## 지도
 
 
+# Map
+## 컬러풀
+```{python}
+from IPython.display import display, HTML
+
+# HTML 파일을 iframe으로 불러오기
+display(HTML('<iframe src="map_nhbh_colorful.html" width="100%" height="800px"></iframe>'))
+
+
+```
+
+## 회색
+```{python}
+# HTML 파일을 iframe으로 불러오기
+display(HTML('<iframe src="map_nhbh_all_gray.html" width="100%" height="800px"></iframe>'))
+
+
+```
 # Conclusion
 
 ## 1. VinylSD에 대한 설명
@@ -310,3 +372,4 @@ Ames 사람들이 선호하는 외장재의 변화
 인테리어 회사는 Ames 주민 뿐만 아니라 Ames와 비슷한
 환경인 다른 지역에서도 이러한 데이터는 유용하게 쓰일 것
 그리고 앞으로 어떠한 트렌드로 사람들이 외장재를 선택하는지에 대한 인사이트를 얻을 수 있음
+

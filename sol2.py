@@ -1,16 +1,18 @@
 import pandas as pd
+import folium
+import webbrowser
+
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-import folium
 import seaborn as sns
-import webbrowser
+
 from sklearn.linear_model import LinearRegression
 
 # 데이터 파일 불러오기
 df = pd.read_csv('data/houseprice-with-lonlat.csv')
 df.columns
-df['Exter_Cond'].value_counts()
+df['Neighborhood'].value_counts()
 
 ex= df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n', ascending=False)
 df.groupby(['Exterior_1st', 'Year_Built'],as_index=False).agg(n=('Exterior_1st','count')).sort_values('n', ascending=False)
@@ -197,3 +199,42 @@ colormap.add_to(map_house)
 map_house.save('map_house.html')
 webbrowser.open_new('map_house.html')
 
+
+#########################
+import pandas as pd
+
+ames = pd.read_csv('Ames_HousePrice_nbhd.csv')
+ames
+
+import folium
+import webbrowser
+
+nbhd = folium.Map(location=[42.034482,-93.642897 ],
+                       zoom_start=13,
+                       tiles='cartodbpositron')
+
+for i in range(len(ames['Longitude'])):
+    folium.CircleMarker([ames['Latitude'][i], ames['Longitude'][i]],
+                        popup=f"위도: {ames['Latitude'][i]}, 경도: {ames['Longitude'][i]}, 동네: ${ames['Neighborhood'][i]}",
+                        radius=ames['Radius'][i]
+                        ).add_to(nbhd)
+                        
+
+nbhd.save('nbhd.html')
+webbrowser.open_new('nbhd.html')
+
+
+###
+
+import json
+
+geo = json.load(open("data/city.geojson", encoding="UTF-8"))
+geo
+# 데이터 탐색
+type(geo_seoul)
+len(geo_seoul)
+geo_seoul.keys()
+geo_seoul["features"][0]
+len(geo_seoul["features"])
+len(geo_seoul["features"][0])
+geo_seoul["features"][0].keys()
