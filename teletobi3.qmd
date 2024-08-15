@@ -1,0 +1,69 @@
+---
+title: "Ames House"
+author: "4조(텔레토비조)"
+format: 
+  dashboard:
+    scrolling: True
+    logo: "img/teletobi.jpg"
+    nav-buttons:
+      - icon: github
+        href: https://github.com/bonboneee/Project2
+      - text: "김연예진"
+        href: https://yeonyejin.github.io/mywebsite/        
+      - text: "문지윤"
+        href: https://jiyunmoon37.github.io/myportfolio/
+      - text: "유은서"
+        href: https://bonboneee.github.io/mywebsite/
+      - text: "이예솔"
+        href: https://yesolee.github.io/mywebsite/                          
+---
+
+# About
+# Map
+
+## 밸류박스 
+```{python}
+#| content: valuebox
+#| title: "VinylSd rate 1990s"
+dict(
+  icon = "archive",
+  color = "light",
+  value = "63%"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Current churn rate"
+dict(
+  icon = "graph-down",
+  color = "light",
+  value = "14%"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "Churn rate goal"
+dict(
+  icon = "bullseye",
+  color = "warning",
+  value = "10%"
+)
+```
+
+## 컬러풀
+```{python}
+from IPython.display import display, HTML
+# HTML 파일을 iframe으로 불러오기
+display(HTML('<iframe src="decade_top_exterior.html" width="60%" height="400px"></iframe>'))
+```
+
+## 회색
+```{python}
+from IPython.display import display, HTML
+# HTML 파일을 iframe으로 불러오기
+display(HTML('<iframe src="map_nhbh_all_gray.html" width="50%" height="400px"></iframe>'))
+```
+
+# Conclusion

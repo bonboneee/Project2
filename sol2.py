@@ -12,9 +12,20 @@ from sklearn.linear_model import LinearRegression
 # 데이터 파일 불러오기
 df = pd.read_csv('data/houseprice-with-lonlat.csv')
 df.columns
+# 10년 단위로 데이터 그룹화
+df['Decade'] = (df['Year_Built'] // 10) * 10
+
+# 그룹화 및 데이터 집계
+decade_grouped = df.groupby(['Decade', 'Exterior_1st']).agg(count=('Exterior_1st', 'count')).reset_index().reset_index()
+decade_grouped
+count_exterior = df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n',ascending=False).reset_index()
+exteriors =list(count_exterior['Exterior_1st'])
+palette_exterior = ["#FF6F61", "#6F9FD8", "#F7C94C", "#6DBE45", "#FF8C00"] + ["#D3D3D3"] * 11
+color_exterior = {ext:color for ext,color in zip(exteriors,palette_exterior)}
+color_exterior
 df['Neighborhood'].value_counts()
 
-ex= df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n', ascending=False)
+ex= df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count'))
 df.groupby(['Exterior_1st', 'Year_Built'],as_index=False).agg(n=('Exterior_1st','count')).sort_values('n', ascending=False)
 ex
 ["VinylSd","MetalSd","HdBoard","Wd Sdng","Plywood","CemntBd","BrkFace"]
