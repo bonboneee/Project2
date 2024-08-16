@@ -350,7 +350,7 @@ display(HTML('<iframe src="decade_top_exterior.html" width="60%" height="400px">
 ```{python}
 from IPython.display import display, HTML
 # HTML 파일을 iframe으로 불러오기
-display(HTML('<iframe src="map_nhbh_all_gray.html" width="50%" height="400px"></iframe>'))
+display(HTML('<iframe src="map_nhbh_2000.html" width="50%" height="400px"></iframe>'))
 ```
 
 ###

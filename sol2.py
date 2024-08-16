@@ -44,7 +44,7 @@ rank = {
 df['rank_Exter_Cond'] = [rank[key] for key in df['Exter_Cond']]
 df['Exterior_1st'].value_counts().sort_values(ascending=False)
 ex = df.groupby(['Exterior_1st','Neighborhood'],as_index=False).agg(n=('Neighborhood','count'))
-df['Exterior_1st'].unique(|)
+df['Exterior_1st'].unique()
 ex['VinylSd']
 ex.value_counts()
 fig = px.scatter(
