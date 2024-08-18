@@ -1,0 +1,450 @@
+---
+title: "Ames House Exterior Trend"
+author: "4조(텔레토비조)"
+format: 
+  dashboard:
+    theme: Simplex
+    scrolling: True
+    logo: "img/teletobi.jpg"
+    nav-buttons:
+      - icon: github
+        href: https://github.com/bonboneee/Project2
+      - text: "김연예진"
+        href: https://yeonyejin.github.io/mywebsite/        
+      - text: "문지윤"
+        href: https://jiyunmoon37.github.io/myportfolio/
+      - text: "유은서"
+        href: https://bonboneee.github.io/mywebsite/
+      - text: "이예솔"
+        href: https://yesolee.github.io/mywebsite/                          
+---
+
+```{python}
+from IPython.display import display, HTML
+```
+
+# {.sidebar}
+
+## 연구목적
+
+1. 외장재 소재 선택의 중요성
+- 경제: 기술 발전에 따른 비용 감소, 고효율성
+- 정책: 환경 규제에 따른 외장재 선택의 변화
+- 디자인: 전통적/현대적 선호도 차이
+- 기후: Ames 지역의 홍수 문제
+- 지역개발 및 투자 기회
+
+## 트렌드 분석
+
+1. 연도별 외장재별 사용 빈도
+2. Exterior_1st와 Exterior_2nd 비교
+3. 전체년도 외장재별 지도
+4. 10년 단위 외장재 사용 변화 및 탐구대상 선정
+
+## 2000년대 탐구
+
+1. 1990년대 대비 외장재별 건축수 비교
+2. 2000년대 외장재별 지도
+3. 외장재별 동네 분포 현황
+
+
+### 주요 외장재 특징
+
+1. Wd Sding : Wood Siding
+2. MetalSd : Metal Siding
+3. HdBoard : Hard Board
+4. Plywood: Plywood
+5. VinylSd: Vinyl Siding
+6. CemntBd: Cement Board
+7. Fiber Cement Siding : 2010년대~
+
+### 결론
+
+1. 시대별 선호 외장재
+2. 시대별 변화 이유
+3. 결론
+
+
+# 연구 목적
+## row
+### Column {width=50%}
+<img src="img/pigs.jpg" style="width: 100%;">
+
+### Column {width=50%}
+::: {.card title="**외장재 소재 선택의 중요성**"}
+- 경제: 기술 발전에 따른 비용 감소, 고효율성
+- 정책: 환경 규제에 따른 외장재 선택의 변화
+- 디자인: 전통적/현대적 선호도 차이
+- 기후: Ames 지역의 홍수 문제
+- 지역개발 및 투자 기회
+:::
+
+## row
+### Column {width=25%}
+<img src="img/1944flood_paper1a.jpg" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1944flood8.jpg" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1975-06-26.png" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1990-06-18.png" style="height:200px;">
+
+## row
+### Column {width=50%}
+{{< video https://youtu.be/0OZwRJlPvLA?si=Iu_K7_8HE0_GZ910 title='1993' >}}
+
+### Column {width=50%}
+{{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
+
+
+# 트렌드 분석
+
+## row
+```{python}
+#| title: 연도별 외장재 종류별 건축수
+display(HTML('<iframe src="graph/year_exterior.html" height="400px"; ></iframe>'))
+```
+
+## row
+**❗겹치는 색이 많아 확인이 어렵다.**
+
+## row
+```{python}
+#| title: 연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
+display(HTML('<iframe src="graph/year_exterior_gray.html" height="400px"; ></iframe>'))
+```
+
+## row
+::: {.card title="외장재 사용 빈도 TOP6 (100건이상 사용재료)"}
+|순위| 외장재 | Exterior_1st | Exterior_2nd |
+|---|--------------|--------|---------------|
+|1위🥇| VinylSd | 1,026 | 1,015 |
+|2위🥈| MetalSd | 450 | 447 |
+|3위🥉| HdBoard | 442 | 406 |
+|4위| Wd Sdng | 420 | 397 |
+|5위| Plywood | 221 | 274 |
+|6위| CemntBd | 126 | 126 |
+: {.striped}
+
+❗CemntBd의 경우 Exterior_2nd는 CmentBd로 표기되었다.
+
+🔎 Exterior_1st와 Exterior_2nd의 순위가 1~6까지 동일하기 때문에 Exterior_1st 자료로만 분석을 진행하기로 결정!
+:::
+
+
+## row
+### Column {width=75%}
+```{python}
+#| title: 전체년도 외장재별 분포 현황
+display(HTML('<iframe src="graph/map_exterior_1111.html" height="400px"; ></iframe>'))
+```
+
+### Column {width=25%}
+::: {.card title="외장재별 동네 분포 차이"}
+
+1. 새로 지어진 동네의 경우 당시 유행한 건축 재료를 사용할 가능 성이 높을 것이다.
+2. 최근에 유행한 외장재의 건수가 많은 동네가 새로 지어진 동네일 것이다.
+
+❗ 동네가 겹치는 부분이 있는 것으로 보아 데이터가 정확하지 않은 것 같다.
+
+❗ 해당 자료는 Ames전체 건축수가 아닌, 2000년대 초반에 판매된 일부 집에 대한 자료이기 때문에 정확도에 한계가 있다.
+
+🔎 특정 연도를 지도에 시각화 해보면 그 당시 어떤 동네가 생겼는지 확인 할 수 있지 않을까?
+
+:::
+
+
+## row
+### Column {width=75%}
+```{python}
+#| title: 10년단위 트렌드 변화
+display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe>'))
+```
+
+### Column {width=25%}
+::: {.card title="**💡2000년대 건축수가 많은 이유**"}
+
+1. 경제적 번영
+- 2000년대 초반은 미국 전체적으로 경제가 비교적 안정적인 시기였다.
+2. 부동산 시장의 활기
+- 미국 부동산 시장의 버블 형성과 함께 대출 기준이 매우 느슨해졌던 시기였다.
+
+🔎 건축수가 가장 많은 2000년대를 집중 탐구해보기로 결정!
+
+:::
+
+# 2000년대 탐구
+## row
+```{python}
+#| content: valuebox
+#| title: "Total Built(▲446)"
+dict(
+  icon = "building",
+  color = "light",
+  value = "780"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "🥇 VinylSd(▲460)"
+dict(
+  icon = "emoji-kiss",
+  color = "#FF6F61",
+  value = "645"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "🥉 MetalSd(▲28)"
+dict(
+  icon = "emoji-smile",
+  color = "#6F9FD8",
+  value = "59"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "HdBoard(🔻83)"
+dict(
+  icon = "emoji-tear",
+  color = "#F7C94C",
+  value = "3"
+)
+```
+
+```{python}
+#| content: valuebox
+#| title: "🥈 CemntBd(▲57)"
+dict(
+  icon = "emoji-sunglasses",
+  color = "#4DB6AC",
+  value = "64"
+)
+```
+
+
+## row
+
+### Column {width=70%}
+```{python}
+#| title: 2000년대 건축 건물 외장재별 분포 현황 
+display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="600px"></iframe>'))
+```
+
+### Column {width=30%} {.tabset}
+
+::: {.card title="VinylSd"}
+###### VinylSd 많은 동네 TOP5
+| 동네이름 | 건물수 | 
+|--------------|------ |
+| College_Creek | 152 |
+| Northridge_Heights | 126 |
+| Somerset| 113 |
+| Gilbert | 88 |
+| Timberland | 39 |
+: {.striped}
+
+###### [College_Creek 동네 구경하기](https://www.google.com/maps/@42.0167856,-93.6895449,3a,20.9y,334.74h,94.56t/data=!3m7!1e1!3m5!1spVgiygrqYkzz0lPK46h2Xw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DpVgiygrqYkzz0lPK46h2Xw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D306.99847%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?coh=205409&entry=ttu)
+
+<img src="img/VinylSd_house.png" style="height:250px;">
+:::
+
+::: {.card title="MetalSd"}
+###### MetalSd 많은 동네 TOP5
+| 동네이름 | 건물수 | 
+|--------------|------ |
+| Somerset | 28 |
+| Northridge_Heights | 24 |
+| Stone_Brook | 4 |
+| North_Ames | 2 |
+| Timberland | 1 |
+: {.striped}
+
+###### [Somerset 동네 구경하기](https://www.google.com/maps/@42.0521924,-93.6438282,3a,24.2y,353.76h,93.87t/data=!3m6!1e1!3m4!1sjF6YtKpkorbDkQSeIgcbcw!2e0!7i16384!8i8192?coh=205409&entry=ttu)
+
+<img src="img/MetalSd_house.png" style="height:250px;">
+:::
+
+::: {.card title="HdBoard"}
+###### HdBoard 많은 동네 TOP5
+| 동네이름 | 건물수 | 
+|--------------|------ |
+| Edwards| 2 |
+| College_Creek | 1 |
+: {.striped}
+
+###### [Edwards 동네 구경하기](https://www.google.com/maps/@42.0188757,-93.6723258,3a,41.4y,0.8h,96.35t/data=!3m6!1e1!3m4!1sC2n2w5Gaci36qa3YOnY1IQ!2e0!7i16384!8i8192?coh=205409&entry=ttu)
+
+<img src="img/HdBoard_house.png" style="height:300px;">
+:::
+
+::: {.card title="CemntBd"}
+###### CemntBd 많은 동네 TOP5
+| 동네이름 | 건물수 | 
+|--------------|------ |
+| Somerset| 18 |
+| Northridge_Heights | 15 |
+| Crawford | 9 |
+| Stone_Brook | 9 |
+| College_Creek | 5 |
+: {.striped}
+
+###### [Northridge_Heights 동네 구경하기](https://www.google.com/maps/place/42%C2%B003'43.0%22N+93%C2%B039'25.3%22W/@42.0621747,-93.6569774,3a,21.5y,177.23h,93.84t,0.06r/data=!3m6!1e1!3m4!1sUoyNRAFKFKO0dyr9UEwhMA!2e0!7i16384!8i8192!4m4!3m3!8m2!3d42.0619444!4d-93.6570278?coh=205409&entry=ttu)
+
+<img src="img/CemntBd_house.png" style="height:250px;">
+:::
+
+# 주요 외장재 특징
+
+## row
+
+### Column {width=33%}
+
+::: {.card title="Wd Sdng"}
+<img src="img/Wd Sdng.png" style="height:250px;">
+
+- 환경 친화적인 소재이며, 자연스러운 목재의 느낌이 고급스러운 분위기를 자아낸다.
+
+- 여러 종류의 목재와 마감처리로 다양한 외관을 구현할 수 있다.
+
+- 그러나 목재는 주기적인 페인트, 스테인 처리가 필요하며 습기와 해충에 취약할 수 있다.
+:::
+
+### Column {width=33%}
+::: {.card title="MetalSd"}
+<img src="img/MetalSd.png" style="height:250px;">
+
+- 금속 특성상 부식과 해충에 강하며, 극한의 날씨에서도 잘 견딘다.
+
+- 녹슬지 않는 금속은 유지보수가 덜 필요하며, 오랜 기간동안 외관을 유지할 수 있다.
+
+- 그러나 초기비용이 높고, 설치가 다소 복잡하다.
+:::
+
+### Column {width=33%}
+::: {.card title="HdBoard"}
+<img src="img/HdBoard.png" style="height:250px;">
+- 하드보드는 쉽게 절단, 가공할 수 있어 다양한 디자인에 맞출 수 있다.
+
+- 다른 천연 목재에 비해 저렴한 편이다.
+
+- 그러나 습기에 노출될 경우 팽창하거나 변형될 수 있어 주기적인 유지 보수가 필요하다.
+
+:::
+
+## row
+
+### Column {width=33%}
+::: {.card title="Plywood"}
+<img src="img/Plywood.png" style="height:250px;">
+
+- 결을 교차시켜 압착한 구조덕분에 강도와 내구성이 뛰어나고 뒤틀림이 적다.
+
+- 천연 목재에 비해 저렴한 편이며, 재활용이 가능하여 환경 친화적이다.
+
+- 절단, 드릴링 등 다양한 가공 작업에 용이하다.
+
+- 그러나 습기에 노출되면  부풀거나 손상될 수 있어 방수처리가 필수적이다.
+:::
+
+
+### Column {width=33%}
+::: {.card title="VinylSd"}
+<img src="img/VinylSd.png" style="height:250px;">
+- 습기와 해충에 강해 오랜 시간 유지된다
+
+- 쉽게 청소할 수 있으며, 페인트가 벗겨지거나 갈라질 염려가 거의 없다.
+
+- 설치가 비교적 쉽고, 페인트가 벗겨질 염려가 없다.
+
+- 그러나 외관상 인공적인 느낌으로 인해 선호도가 떨어진다.
+
+:::
+
+### Column {width=33%}
+::: {.card title="CemntBd"}
+<img src="img/CemntBd.png" style="height:250px;">
+- 시멘트와 섬유가 결합된 구조로, 충격과 기후변화에 강하며 오랜 시간동안 형태 유지가 가능하다.
+
+- 페인트가 잘 벗겨지지 않으며, 유지보수 비용이 적게 든다.
+
+- 그러나 시멘트 보드는 무거워 설치가 어려울 수 있고, 전문시공이 필요하다.
+
+:::
+
+## row
+::: {.card title="Fiber Cement Siding"}
+<img src="img/CemntBd.png" style="height:250px;">
+
+
+:::
+
+# 결론
+
+## row
+```{python}
+#| title: 10년대별 외장재 트렌드
+display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></iframe>'))
+```
+
+## row
+
+**시대별 선호 외장재**
+
+## row
+
+### Column {width=25%}
+::: {.card title="1900 ~ 1950년대"}
+- WD Sdng
+- MetalSd
+:::
+### Column {width=25%}
+::: {.card title="1960 ~ 1980년대"}
+- HdBoard
+- Plywood
+
+:::
+### Column {width=25%}
+::: {.card title="1990 ~ 2000년대"}
+- VinylSd
+기술의 발전으로 전과다른~
+- CemnBd
+
+:::
+### Column {width=25%}
+::: {.card title="2010년대 이후"}
+- Fiber Cement Siding
+ 내구성, 방화성, 저유지보수성이 좋고, 목재의 외관을 모방하면서도 훨씬 더 오랜 기간 동안 유지되어 중고급 주택에서 많이 사용됨
+
+- VinylSd
+저렴하면서도 다양한 색상과 스타일을 제공하여, 주택 소유주들 사이에서 꾸준한 인기를 유지
+
+:::
+
+
+## 1. VinylSD에 대한 설명
+
+비닐 사이딩은 내후성이 좋고 비용과 설치가 편하다.
+비닐 사이딩은 내구성이 뛰어나 오래 사용할 수 있으며, 정기적인 교체가 필요 없어 폐기물을 줄이는 데 기여한다. 
+생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적고, 단열 비닐 사이딩을 통해 에너지 효율성을 높여 난방 및 냉방 비용을 절감할 수 있다.
+ 또한, 비닐 사이딩은 재활용이 가능해 환경적 영향을 최소화할 수 있으며, 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄인다.
+비닐 사이딩은 주택의 가치를 높이는 데 기여할 수 있다. 이는 잠재적 구매자들에게 오랜 기간 유지할 수 있는 외장재로 인식되며, 보증이 새 소유자에게 양도 가능하다는 장점이 있다.
+
+
+## 2. Topic : Ames 사람들은 홍수가 벌어짐에 어떤 외장재로 대비하고 있을까?
+
+텔레토비조의 주제
+Ames 사람들이 선호하는 외장재의 변화
+
+-> 이 자료는 인테리어 사업을 하는 회사에게 도움이 될 것
+인테리어 회사는 Ames 주민 뿐만 아니라 Ames와 비슷한
+환경인 다른 지역에서도 이러한 데이터는 유용하게 쓰일 것
+그리고 앞으로 어떠한 트렌드로 사람들이 외장재를 선택하는지에 대한 인사이트를 얻을 수 있음
+
+## 3. 연도별 동네 변천사?? 빼는게 나은가

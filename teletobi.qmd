@@ -3,6 +3,7 @@ title: "Ames House"
 author: "4조(텔레토비조)"
 format: 
   dashboard:
+    scrolling: True
     logo: "img/teletobi.jpg"
     nav-buttons:
       - icon: github
@@ -70,7 +71,7 @@ format:
 
 {{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
 
-# Analysis1
+# 외장재 트렌드
 
 ## 첫번째 
 ```{python}
@@ -85,78 +86,8 @@ fig = px.histogram(df, x='Year_Built', color='Exterior_1st',
                    labels={"Exterior_1st":"외강재 소재"},
                    category_orders={"Exterior_1st": desc_order},
                    barmode='stack')
-fig.update_xaxes(dtick=1)
+fig.update_xaxes(dtick=1, tickangle=90, tickfont=dict(size=5))
 ```
-
-### TOP7 소재 설명 {.tabset}
-::: {.card title="VinylSd"}
-- 습기와 해충에 강해 오랜 시간 유지된다
-
-- 쉽게 청소할 수 있으며, 페인트가 벗겨지거나 갈라질 염려가 거의 없다.
-
-- 설치가 비교적 쉽고, 페인트가 벗겨질 염려가 없다.
-
-- 그러나 외관상 인공적인 느낌으로 인해 선호도가 떨어진다.
-
-![](img/VinylSd.png)
-:::
-::: {.card title="MetalSd"}
-- 금속 특성상 부식과 해충에 강하며, 극한의 날씨에서도 잘 견딘다.
-
-- 녹슬지 않는 금속은 유지보수가 덜 필요하며, 오랜 기간동안 외관을 유지할 수 있다.
-
-- 그러나 초기비용이 높고, 설치가 다소 복잡하다.
-
-![](img/MetalSd.png)
-:::
-::: {.card title="Wd Sdng"}
-- 환경 친화적인 소재이며, 자연스러운 목재의 느낌이 고급스러운 분위기를 자아낸다.
-
-- 여러 종류의 목재와 마감처리로 다양한 외관을 구현할 수 있다.
-
-- 그러나 목재는 주기적인 페인트, 스테인 처리가 필요하며 습기와 해충에 취약할 수 있다.
-
-![](img/Wd Sdng.png)
-:::
-::: {.card title="HdBoard"}
-- 하드보드는 쉽게 절단, 가공할 수 있어 다양한 디자인에 맞출 수 있다.
-
-- 다른 천연 목재에 비해 저렴한 편이다.
-
-- 그러나 습기에 노출될 경우 팽창하거나 변형될 수 있어 주기적인 유지 보수가 필요하다.
-
-![](img/HdBoard.png)
-:::
-::: {.card title="Plywood"}
-- 결을 교차시켜 압착한 구조덕분에 강도와 내구성이 뛰어나고 뒤틀림이 적다.
-
-- 천연 목재에 비해 저렴한 편이며, 재활용이 가능하여 환경 친화적이다.
-
-- 절단, 드릴링 등 다양한 가공 작업에 용이하다.
-
-- 그러나 습기에 노출되면  부풀거나 손상될 수 있어 방수처리가 필수적이다.
-
-![](img/Plywood.png)
-:::
-::: {.card title="CemntBd"}
-- 시멘트와 섬유가 결합된 구조로, 충격과 기후변화에 강하며 오랜 시간동안 형태 유지가 가능하다.
-
-- 페인트가 잘 벗겨지지 않으며, 유지보수 비용이 적게 든다.
-
-- 그러나 시멘트 보드는 무거워 설치가 어려울 수 있고, 전문시공이 필요하다.
-![](img/CemntBd.png)
-:::
-::: {.card title="BrkFace"}
-- 벽돌은 튼튼하고 오래 지속되는 재료다
-
-- 바람, 비, 눈, 해충에 대한 저항력이 뛰어나다.
-
-- 고급스럽고, 전통적인 매력을 자아내서 일반적으로 더 높은 부동산 가치를 지닌다.
-
-- 그러나 초기 설치 비용이 높은 단점이 있다.
-![](img/BrkFace.png)
-:::
-
 
 ## 두번째
 ```{python}
@@ -171,7 +102,7 @@ fig = px.histogram(df, x='Year_Built', color='Exterior_1st',
                    barmode='stack',
                    color_discrete_map=color_map)
 
-fig.update_xaxes(dtick=1)
+fig.update_xaxes(dtick=1, tickangle=90, tickfont=dict(size=5))
 
 ```
 
@@ -284,6 +215,79 @@ fig.show()
 2000년대
 <iframe src="2000.html" width="100%" height="600"></iframe>
 
+# 외장재
+
+## TOP7 소재 설명 {.tabset}
+::: {.card title="VinylSd"}
+- 습기와 해충에 강해 오랜 시간 유지된다
+
+- 쉽게 청소할 수 있으며, 페인트가 벗겨지거나 갈라질 염려가 거의 없다.
+
+- 설치가 비교적 쉽고, 페인트가 벗겨질 염려가 없다.
+
+- 그러나 외관상 인공적인 느낌으로 인해 선호도가 떨어진다.
+
+![](img/VinylSd.png)
+:::
+::: {.card title="MetalSd"}
+- 금속 특성상 부식과 해충에 강하며, 극한의 날씨에서도 잘 견딘다.
+
+- 녹슬지 않는 금속은 유지보수가 덜 필요하며, 오랜 기간동안 외관을 유지할 수 있다.
+
+- 그러나 초기비용이 높고, 설치가 다소 복잡하다.
+
+![](img/MetalSd.png)
+:::
+::: {.card title="Wd Sdng"}
+- 환경 친화적인 소재이며, 자연스러운 목재의 느낌이 고급스러운 분위기를 자아낸다.
+
+- 여러 종류의 목재와 마감처리로 다양한 외관을 구현할 수 있다.
+
+- 그러나 목재는 주기적인 페인트, 스테인 처리가 필요하며 습기와 해충에 취약할 수 있다.
+
+![](img/Wd Sdng.png)
+:::
+::: {.card title="HdBoard"}
+- 하드보드는 쉽게 절단, 가공할 수 있어 다양한 디자인에 맞출 수 있다.
+
+- 다른 천연 목재에 비해 저렴한 편이다.
+
+- 그러나 습기에 노출될 경우 팽창하거나 변형될 수 있어 주기적인 유지 보수가 필요하다.
+
+![](img/HdBoard.png)
+:::
+::: {.card title="Plywood"}
+- 결을 교차시켜 압착한 구조덕분에 강도와 내구성이 뛰어나고 뒤틀림이 적다.
+
+- 천연 목재에 비해 저렴한 편이며, 재활용이 가능하여 환경 친화적이다.
+
+- 절단, 드릴링 등 다양한 가공 작업에 용이하다.
+
+- 그러나 습기에 노출되면  부풀거나 손상될 수 있어 방수처리가 필수적이다.
+
+![](img/Plywood.png)
+:::
+::: {.card title="CemntBd"}
+- 시멘트와 섬유가 결합된 구조로, 충격과 기후변화에 강하며 오랜 시간동안 형태 유지가 가능하다.
+
+- 페인트가 잘 벗겨지지 않으며, 유지보수 비용이 적게 든다.
+
+- 그러나 시멘트 보드는 무거워 설치가 어려울 수 있고, 전문시공이 필요하다.
+![](img/CemntBd.png)
+:::
+::: {.card title="BrkFace"}
+- 벽돌은 튼튼하고 오래 지속되는 재료다
+
+- 바람, 비, 눈, 해충에 대한 저항력이 뛰어나다.
+
+- 고급스럽고, 전통적인 매력을 자아내서 일반적으로 더 높은 부동산 가치를 지닌다.
+
+- 그러나 초기 설치 비용이 높은 단점이 있다.
+![](img/BrkFace.png)
+:::
+
+
+## 지도
 
 
 # Conclusion

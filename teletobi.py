@@ -3,6 +3,9 @@ import pandas as pd
 import plotly.express as px
 import branca.colormap as cm
 df = pd.read_csv('data/houseprice-with-lonlat.csv')
+df['Neighborhood'].unique()
+exterior_distribution = df.groupby(['Year_Built', 'Exterior_1st']).size().reset_index(name='Count')
+exterior_distribution
 df['Exterior_1st'].value_counts()
 num_exterior = df.groupby('Exterior_1st',as_index=False).agg(n=('Exterior_1st','count')).sort_values('n',ascending=False)
 
