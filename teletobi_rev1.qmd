@@ -45,7 +45,6 @@ from IPython.display import display, HTML
 - 경제: 기술 발전에 따른 비용 감소, 고효율성
 - 디자인: 전통적/현대적 선호도 차이
 - 기후: Ames 지역의 홍수 문제
-- 지역개발 및 투자 기회
 
 ## 트랜드 분석
 
@@ -148,7 +147,6 @@ from IPython.display import display, HTML
 - 경제: 기술 발전에 따른 비용 감소, 고효율성
 - 디자인: 전통적/현대적 선호도 차이
 - 기후: Ames 지역의 홍수 문제
-- 지역개발 및 투자 기회
 :::
 
 ## row 
@@ -534,33 +532,36 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 
 ## row
 
-
 ### Column {width=50%}
-::: {.card title="외장재 변화를 조사한 이유" class="card-title-3"}
+::: {.card title="**✍️외장재 변화를 조사한 이유**" class="card-title-3"}
 
-- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**조사 대상**: Ames 지역 주민들이 선호하는 외장재의 변화.</div>
+- <div style="background-color: #F4F4FB; padding: 10px; border-radius: 5px;">**조사 대상**: Ames 지역 주민들이 선호하는 외장재의 변화.</div>
 
-- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**목적**: 인테리어 사업을 운영하는 회사에 도움을 제공하기 위해..</div>
+- <div style="background-color: #F4F4FB; padding: 10px; border-radius: 5px;">**목적**: 인테리어 사업을 운영하는 회사에 도움을 제공하기 위해..</div>
 
-- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**적용 가능성**: 이 연구 결과는 Ames 지역뿐만 아니라 유사한 기후와 환경을 가진 다른 지역에서도 활용할 수 있음.</div>
+- <div style="background-color: #F4F4FB; padding: 10px; border-radius: 5px;">**적용 가능성**: 이 연구 결과는 Ames 지역뿐만 아니라 유사한 기후와 환경을 가진 다른 지역에서도 활용할 수 있음.</div>
 
 :::
 
 ### Column {width=50%}
-::: {.card title="외장재 트렌드 변화의 중요성" class="card-title-3"}
+::: {.card title="**✍️외장재 트렌드 변화의 중요성**" class="card-title-3"}
 
-- 트렌드 인사이트: 소비자들의 외장재 선택 트렌드를 파악함으로써, 향후 시장 전망에 대한 통찰을 제공함.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">트렌드 인사이트: 소비자들의 외장재 선택 트렌드를 파악함으로써, 향후 시장 전망에 대한 통찰을 제공함.</div>
 
-- 기후 변화: 지역의 기후 변화에 따라 외장재 선택이 달라지며, 자연재해에 효과적으로 대응할 수 있는 외장재의 중요성이 증가함.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">기후 변화: 지역의 기후 변화에 따라 외장재 선택이 달라지며, 자연재해에 효과적으로 대응할 수 있는 외장재의 중요성이 증가함.</div>
 
-- 기술 발전: 새로운 기술의 도입으로 효율적이고 지속 가능한 외장재가 개발되고 있으며, 이러한 변화에 대한 이해는 필수적임.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">기술 발전: 새로운 기술의 도입으로 효율적이고 지속 가능한 외장재가 개발되고 있으며, 이러한 변화에 대한 이해는 필수적임.</div>
 
-- 투자 가치: 외장재 선택은 건물의 전체적인 가치와 시장성을 결정짓는 중요한 요소로, 트렌드를 잘 분석하고 반영하는 것이 장기적인 투자 가치를 높이는 데 기여함.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">투자 가치: 외장재 선택은 건물의 전체적인 가치와 시장성을 결정짓는 중요한 요소로, 트렌드를 잘 분석하고 반영하는 것이 장기적인 투자 가치를 높이는 데 기여함.</div>
+
 :::
 
 ## row
-::: {.card title="결론" class="card-title-3"}
-결론은 Ames 지역의 외장재 트렌드 변화를 분석함으로써 인테리어 및 건축 사업에 중요한 통찰을 제공하며, 기술 발전, 기후 변화, 경제적 요인 등이 외장재 선택에 중요한 영향을 미친다는 것입니다.
+::: {.card title="**✍️결론**" class="card-title-3"}
+
+- <div style="background-color: #FFF5F5; padding: 10px; border-radius: 5px;">결론은 Ames 지역의 외장재 트렌드 변화를 분석함으로써 인테리어 및 건축 사업에 중요한 통찰을 제공하며, 기술 발전, 기후 변화, 경제적 요인 등이 외장재 선택에 중요한 영향을 미친다는 것입니다.</div>
+
 :::
+
 
 <img src="img/simpson.jpg" alt="화목한 심슨네 집" style="width: 50%;">
