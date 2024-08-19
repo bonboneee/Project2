@@ -69,70 +69,74 @@ from IPython.display import display, HTML
 # 연구 목적
 ## row
 ### Column {width=50%}
-
 ## row {.tabset}
 
 ### 아기돼지삼형제 독립🐷
-- "아기돼지 삼형제"는 유명한 동화로, 세 마리의 아기돼지가 등장하는 이야기입니다.
+
 - 아기돼지 삼형제는 집을 떠나 각각 다른 성격과 방법으로 집을 짓기로 결정합니다.
-![아기돼지가 집을 떠나는 장면](img/first.jpg)
+
+<img src="img/first.jpg" alt="아기돼지가 집을 떠나는 장면" style="width: 30%;">
 
 ::: {.tabset}
-### ☝️첫째 아기돼지의 집
-- 첫째 아기돼지는 지푸라기로 집을 지었습니다.
-<div style="display: flex; justify-content: space-around;">
-    <img src="img/pig1_house.jpg" alt="첫째 아기돼지의 집" style="width: 45%;">
-    <img src="img/pig1_house1.jpg" alt="첫째 아기돼지의 집 2" style="width: 45%;">
-</div>
 
-- 배고픈 늑대가 나타나 첫째 아기돼지의 지푸라기 집을 부수고 그를 잡아먹으려 합니다. 
+### ☝️첫째 아기돼지의 집
+
 <div style="display: flex; justify-content: space-around;">
-    <img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 45%;">
-    <img src="img/pig1_house3.jpg" alt="늑대 침입 2" style="width: 45%;">
+<img src="img/pig1_house.jpg" alt="첫째 아기돼지의 집" style="width: 20%;">
+<img src="img/pig1_house1.jpg" alt="첫째 아기돼지의 집 2" style="width: 20%;">
+</div>
+- 첫째 아기 돼지는 지푸라기로 집을 지어서 늑대가 집을 금방 부수게 됩니다.  
+<div style="display: flex; justify-content: space-around;">
+<img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 20%;">
+<img src="img/pig1_house3.jpg" alt="늑대 침입 2" style="width: 20%;">
 </div>
 - 첫째 아기돼지는 급히 둘째 아기돼지의 집으로 도망칩니다.
 :::
 
 ::: {.tabset}
-### ✌️둘째 아기돼지의 집
-- 둘째 아기돼지는 나무로 집을 지었습니다.
-<div style="display: flex; justify-content: space-around;">
-    <img src="img/pig2_house.jpg" alt="둘째 아기돼지의 집" style="width: 45%;">
-    <img src="img/pig2_house2.jpg" alt="둘째 아기돼지의 집 2" style="width: 45%;">
-</div>
 
-- 늑대는 둘째 아기돼지의 나무 집도 쉽게 부숴버립니다.
+### ✌️둘째 아기돼지의 집
+
 <div style="display: flex; justify-content: space-around;">
-    <img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 45%;">
-    <img src="img/pig2_house3.jpg" alt="늑대 침입 2" style="width: 45%;">
+<img src="img/pig2_house.jpg" alt="둘째 아기돼지의 집" style="width: 20%;">
+<img src="img/pig2_house2.jpg" alt="둘째 아기돼지의 집 2" style="width: 20%;">
+</div>
+- 둘째 아기 돼지도 나무로 집을 지어서 역시 늑대가 바로 집을 부수게 되었습니다. 
+<div style="display: flex; justify-content: space-around;">
+<img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 20%;">
+<img src="img/pig2_house3.jpg" alt="늑대 침입 2" style="width: 20%;">
 </div>
 :::
 
 ::: {.tabset}
-### 🤟셋째 아기돼지의 집
-- 셋째 아기돼지는 벽돌로 집을 지었습니다.
-- 두 아기돼지는 셋째 아기돼지의 벽돌 집으로 숨습니다.
-<div style="display: flex; justify-content: space-around;">
-    <img src="img/pig3_house.jpg" alt="셋째 아기돼지의 집" style="width: 45%;">
-    <img src="img/pig3_house2.jpg" alt="셋째 아기돼지의 집 2" style="width: 45%;">
-</div>
 
-- 늑대는 셋째 아기돼지의 벽돌 집을 부수려고 하지만, 벽돌 집은 매우 튼튼하여 부수지 못합니다. 
+### 🤟셋째 아기돼지의 집
+
+- 첫째, 둘째 아기돼지는 셋째 아기돼지의 벽돌 집으로 숨습니다.
 <div style="display: flex; justify-content: space-around;">
-    <img src="img/pig3_house3.jpg" alt="늑대와의 대결 1" style="width: 30%;">
-    <img src="img/pig3_house4.jpg" alt="늑대와의 대결 2" style="width: 30%;">
-    <img src="img/pig3_house5.jpg" alt="늑대와의 대결 3" style="width: 30%;">
+<img src="img/pig3_house.jpg" alt="셋째 아기돼지의 집" style="width: 20%;">
+<img src="img/pig3_house2.jpg" alt="셋째 아기돼지의 집 2" style="width: 20%;">
+</div>
+- 셋째 아기 돼지는 벽돌로 집을 튼튼하게 집을 지어서 늑대가 아기 돼지들을 해치지 못하게 되었습니다.
+<div style="display: flex; justify-content: space-around;">
+<img src="img/pig3_house3.jpg" alt="늑대와의 대결 1" style="width: 20%;">
+<img src="img/pig3_house4.jpg" alt="늑대와의 대결 2" style="width: 20%;">
+<img src="img/pig3_house5.jpg" alt="늑대와의 대결 3" style="width: 20%;">
 </div>
 :::
 
 ### 늑대의 패배🐺
-- 결국 늑대는 지치고 포기하게 되고, 세 아기돼지는 안전하게 지낼 수 있게 됩니다.
-![늑대의 패배](img/pig4.jpg)
 
-### 아기돼지 삼형제의 교훈 
+- 결국 늑대는 지치고 포기하게 되고, 세 아기돼지는 안전하게 지낼 수 있게 됩니다.
+
+<img src="img/pig4.jpg" alt="늑대의 패배" style="width: 20%;">
+
+### 아기돼지 삼형제의 교훈
+
 - 이 이야기는 안전과 노력의 중요성을 강조하며, 각자의 방식으로 집을 짓는 것이 어떤 결과를 가져오는지를 보여줍니다. 셋째 아기돼지가 가장 잘 준비한 덕분에 결국 그들이 안전하다는 메시지가 담겨 있습니다.
-- Ames 지역은 홍수가 빈번하게 발생하는 곳으로, 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적입니다. 이는 "아기돼지 삼형제"의 이야기가 교훈을 주듯, 튼튼한 집을 짓는 것이 얼마나 중요한지를 상기 시킵니다.
-![아기돼지 삼형제](img/pigs.jpg)
+- Ames지역은 심각한 홍수를 몇 번 겪었고, 그 외에도 계속 작은 홍수가 자주 발생하는 곳이기 때문에 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적이었을 것입니다. 따라서 외장재의 트렌드가 어떻게 변해갔는지 알아보면 좋을 것 같아서 이 주제를 선택하게 되었습니다.
+
+<img src="img/pigs.jpg" alt="아기돼지 삼형제" style="width: 30%;">
 
 ## row {height=210px}
 ::: {.card title="**외장재 소재 선택의 중요성**"}
@@ -252,7 +256,6 @@ dict(
   value = "780"
 )
 ```
-
 ```{python}
 #| content: valuebox
 #| title: "🥇 VinylSd(▲460)"
@@ -260,6 +263,15 @@ dict(
   icon = "emoji-kiss",
   color = "#FF6F61",
   value = "645"
+)
+```
+```{python}
+#| content: valuebox
+#| title: "🥈 CemntBd(▲57)"
+dict(
+  icon = "emoji-sunglasses",
+  color = "#4DB6AC",
+  value = "64"
 )
 ```
 
@@ -280,16 +292,6 @@ dict(
   icon = "emoji-tear",
   color = "#F7C94C",
   value = "3"
-)
-```
-
-```{python}
-#| content: valuebox
-#| title: "🥈 CemntBd(▲57)"
-dict(
-  icon = "emoji-sunglasses",
-  color = "#4DB6AC",
-  value = "64"
 )
 ```
 
