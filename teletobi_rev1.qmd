@@ -68,36 +68,70 @@ from IPython.display import display, HTML
 # 연구 목적
 ## row
 ### Column {width=50%}
-<img src="img/pigs.jpg" style="width: 100%;">
 
-### Column {width=50%}
-::: {.card title="**외장재 소재 선택의 중요성**"}
-- 경제: 기술 발전에 따른 비용 감소, 고효율성
-- 정책: 환경 규제에 따른 외장재 선택의 변화
-- 디자인: 전통적/현대적 선호도 차이
-- 기후: Ames 지역의 홍수 문제
-- 지역개발 및 투자 기회
+## row {.tabset}
+
+### 아기돼지삼형제 독립🐷
+- "아기돼지 삼형제"는 유명한 동화로, 세 마리의 아기돼지가 등장하는 이야기입니다.
+- 아기돼지 삼형제는 집을 떠나 각각 다른 성격과 방법으로 집을 짓기로 결정합니다.
+![아기돼지가 집을 떠나는 장면](img/first.jpg)
+
+::: {.tabset}
+### ☝️첫째 아기돼지의 집
+- 첫째 아기돼지는 지푸라기로 집을 지었습니다.
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig1_house.jpg" alt="첫째 아기돼지의 집" style="width: 45%;">
+    <img src="img/pig1_house1.jpg" alt="첫째 아기돼지의 집 2" style="width: 45%;">
+</div>
+
+- 배고픈 늑대가 나타나 첫째 아기돼지의 지푸라기 집을 부수고 그를 잡아먹으려 합니다. 
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 45%;">
+    <img src="img/pig1_house3.jpg" alt="늑대 침입 2" style="width: 45%;">
+</div>
+- 첫째 아기돼지는 급히 둘째 아기돼지의 집으로 도망칩니다.
 :::
 
-## row
-### Column {width=25%}
-<img src="img/1944flood_paper1a.jpg" style="height:200px;">
+::: {.tabset}
+### ✌️둘째 아기돼지의 집
+- 둘째 아기돼지는 나무로 집을 지었습니다.
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig2_house.jpg" alt="둘째 아기돼지의 집" style="width: 45%;">
+    <img src="img/pig2_house2.jpg" alt="둘째 아기돼지의 집 2" style="width: 45%;">
+</div>
 
-### Column {width=25%}
-<img src="img/1944flood8.jpg" style="height:200px;">
+- 늑대는 둘째 아기돼지의 나무 집도 쉽게 부숴버립니다.
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig1_house2.jpg" alt="늑대 침입 1" style="width: 45%;">
+    <img src="img/pig2_house3.jpg" alt="늑대 침입 2" style="width: 45%;">
+</div>
+:::
 
-### Column {width=25%}
-<img src="img/1975-06-26.png" style="height:200px;">
+::: {.tabset}
+### 🤟셋째 아기돼지의 집
+- 셋째 아기돼지는 벽돌로 집을 지었습니다.
+- 두 아기돼지는 셋째 아기돼지의 벽돌 집으로 숨습니다.
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig3_house.jpg" alt="셋째 아기돼지의 집" style="width: 45%;">
+    <img src="img/pig3_house2.jpg" alt="셋째 아기돼지의 집 2" style="width: 45%;">
+</div>
 
-### Column {width=25%}
-<img src="img/1990-06-18.png" style="height:200px;">
+- 늑대는 셋째 아기돼지의 벽돌 집을 부수려고 하지만, 벽돌 집은 매우 튼튼하여 부수지 못합니다. 
+<div style="display: flex; justify-content: space-around;">
+    <img src="img/pig3_house3.jpg" alt="늑대와의 대결 1" style="width: 30%;">
+    <img src="img/pig3_house4.jpg" alt="늑대와의 대결 2" style="width: 30%;">
+    <img src="img/pig3_house5.jpg" alt="늑대와의 대결 3" style="width: 30%;">
+</div>
+:::
 
-## row
-### Column {width=50%}
-{{< video https://youtu.be/0OZwRJlPvLA?si=Iu_K7_8HE0_GZ910 title='1993' >}}
+### 늑대의 패배🐺
+- 결국 늑대는 지치고 포기하게 되고, 세 아기돼지는 안전하게 지낼 수 있게 됩니다.
+![늑대의 패배](img/pig4.jpg)
 
-### Column {width=50%}
-{{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
+### 아기돼지 삼형제의 교훈 
+- 이 이야기는 안전과 노력의 중요성을 강조하며, 각자의 방식으로 집을 짓는 것이 어떤 결과를 가져오는지를 보여줍니다. 셋째 아기돼지가 가장 잘 준비한 덕분에 결국 그들이 안전하다는 메시지가 담겨 있습니다.
+- Ames 지역은 홍수가 빈번하게 발생하는 곳으로, 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적입니다. 이는 "아기돼지 삼형제"의 이야기가 교훈을 주듯, 튼튼한 집을 짓는 것이 얼마나 중요한지를 상기 시킵니다.
+![아기돼지 삼형제](img/pigs.jpg)
 
 
 # 트렌드 분석
