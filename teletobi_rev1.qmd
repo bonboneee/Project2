@@ -1,5 +1,5 @@
 ---
-title: "Ames House Exterior Trend"
+title: "**Ames House Exterior Trend** "
 author: "4조(텔레토비조)"
 format: 
   dashboard:
@@ -248,7 +248,7 @@ display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe
 
 ## row
 ```{python}
-#| title: 10년대별 외장재 트랜드
+#| title: 🗂️10년대별 외장재 트랜드
 display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></iframe>'))
 ```
 

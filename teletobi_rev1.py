@@ -152,7 +152,8 @@ fig = px.line(decade_grouped, x='Decade', y='count', color='Exterior_1st',
 
 fig.update_xaxes(dtick=10, tickvals=decade_grouped['Decade'].unique(),
     ticktext=decade_grouped['Decade_Label'].unique(),
-    title_text='')
+    title_text='',
+    range=[1900, max(decade_grouped['Decade'])])
 fig.update_yaxes(title_text='')
 
 fig.update_layout(
