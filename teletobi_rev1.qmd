@@ -133,6 +133,35 @@ from IPython.display import display, HTML
 - Ames 지역은 홍수가 빈번하게 발생하는 곳으로, 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적입니다. 이는 "아기돼지 삼형제"의 이야기가 교훈을 주듯, 튼튼한 집을 짓는 것이 얼마나 중요한지를 상기 시킵니다.
 ![아기돼지 삼형제](img/pigs.jpg)
 
+### Column {width=50%}
+::: {.card title="**외장재 소재 선택의 중요성**"}
+- 경제: 기술 발전에 따른 비용 감소, 고효율성
+- 정책: 환경 규제에 따른 외장재 선택의 변화
+- 디자인: 전통적/현대적 선호도 차이
+- 기후: Ames 지역의 홍수 문제
+- 지역개발 및 투자 기회
+:::
+
+## row
+### Column {width=25%}
+<img src="img/1944flood_paper1a.jpg" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1944flood8.jpg" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1975-06-26.png" style="height:200px;">
+
+### Column {width=25%}
+<img src="img/1990-06-18.png" style="height:200px;">
+
+## row
+### Column {width=50%}
+{{< video https://youtu.be/0OZwRJlPvLA?si=Iu_K7_8HE0_GZ910 title='1993' >}}
+
+### Column {width=50%}
+{{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
+
 
 # 트렌드 분석
 
