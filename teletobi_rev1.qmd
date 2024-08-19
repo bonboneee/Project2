@@ -142,7 +142,7 @@ from IPython.display import display, HTML
 ## row 
 ### Column {width=50%}
 ::: {.card title="**☑️️Ames의 끈질긴 고난, 홍수 관련 뉴스**"}
-<img src="img/1944flood_paper1a.jpg" style="height:500px;">
+<img src="img/1944flood_paper1a.jpg" style="height:400px;">
 :::
 
 ### Column {width=25%}
