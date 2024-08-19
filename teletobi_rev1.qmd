@@ -19,6 +19,15 @@ format:
       - text: "이예솔"
         href: https://yesolee.github.io/mywebsite/                          
 ---
+<style>
+.navbar {
+    background: linear-gradient(to right, #E1BEE7, #FFEB3B, #FFCDD2, #C8E6C9);
+}
+
+.navbar .active {
+background: linear-gradient(to right, #D1C4E9, #FFF59D, #FFABAB, #A5D6A7);
+}
+</style>
 
 ```{python}
 from IPython.display import display, HTML
@@ -26,49 +35,40 @@ from IPython.display import display, HTML
 
 # {.sidebar}
 
-## 연구목적
+## 조사목적
 
 1. 외장재 소재 선택의 중요성
 - 경제: 기술 발전에 따른 비용 감소, 고효율성
-- 정책: 환경 규제에 따른 외장재 선택의 변화
 - 디자인: 전통적/현대적 선호도 차이
 - 기후: Ames 지역의 홍수 문제
 - 지역개발 및 투자 기회
 
-## 트렌드 분석
+## 트랜드 분석
 
-1. 연도별 외장재별 사용 빈도
-2. Exterior_1st와 Exterior_2nd 비교
-3. 전체년도 외장재별 지도
-4. 10년 단위 외장재 사용 변화 및 탐구대상 선정
+1. 연도별 외장재 종류별 건축수
+2. 연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
+3. 외장재 사용 빈도 TOP6 (100건이상 사용재료)
+4. 전체년도 외장재별 분포 현황
+5. 10년단위 트랜드 변화
+
+## 주요 외장재 특징
+
+1. 10년대별 외장재 트랜드 선그래프
+2. 10년대별 주요 외장재 특징
+
 
 ## 2000년대 탐구
 
-1. 1990년대 대비 외장재별 건축수 비교
-2. 2000년대 외장재별 지도
-3. 외장재별 동네 분포 현황
+1. 2000년대 건축 건물 외장재별 분포 현황
+2. 2000년대 VinylSd 동네 TOP5 동네 구경하기
 
 
-### 주요 외장재 특징
+## 결론
 
-1. Wd Sding : Wood Siding
-2. MetalSd : Metal Siding
-3. HdBoard : Hard Board
-4. Plywood: Plywood
-5. VinylSd: Vinyl Siding
-6. CemntBd: Cement Board
-7. Fiber Cement Siding : 2010년대~
+1. 사람들이 VinylSd를 쓰는 이유
+2. 외장재 변화를 조사한 이유 
 
-### 결론
-
-1. 시대별 선호 외장재
-2. 시대별 변화 이유
-3. 결론
-
-
-# 연구 목적
-## row
-### Column {width=50%}
+# 조사 목적
 ## row {.tabset}
 
 ### 아기돼지삼형제 독립🐷
@@ -131,51 +131,38 @@ from IPython.display import display, HTML
 
 <img src="img/pig4.jpg" alt="늑대의 패배" style="width: 20%;">
 
-### 아기돼지 삼형제의 교훈
-#### row {width=50%}
-::: {.card title="아기돼지 삼형제로 바라본 Ames"}
-<img src="img/pigs.jpg" alt="아기돼지 삼형제" style="width: 30%;">
-:::
-
-#### row {width=50%}
-::: {.card title="아기돼지 삼형제로 바라본 Ames"}
-- 이 이야기는 안전과 노력의 중요성을 강조하며, 각자의 방식으로 집을 짓는 것이 어떤 결과를 가져오는지를 보여줍니다. 셋째 아기돼지가 가장 잘 준비한 덕분에 결국 그들이 안전하다는 메시지가 담겨 있습니다.
-- Ames지역은 심각한 홍수를 몇 번 겪었고, 그 외에도 계속 작은 홍수가 자주 발생하는 곳이기 때문에 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적이었을 것입니다. 따라서 외장재의 트렌드가 어떻게 변해갔는지 알아보면 좋을 것 같아서 이 주제를 선택하게 되었습니다.
-:::
+### 🏠아기돼지 삼형제로 바라본 Ames
+#### row
+| ![](img/pigs.jpg){width=30%} | 
+| :--- | 
+| - 이 이야기는 안전과 노력의 중요성을 강조하며, 각자의 방식으로 집을 짓는 것이 어떤 결과를 가져오는지를 보여줍니다. 셋째 아기돼지가 가장 잘 준비한 덕분에 결국 그들이 안전하다는 메시지가 담겨 있습니다.<br><br> - Ames지역은 심각한 홍수를 몇 번 겪었고, 그 외에도 계속 작은 홍수가 자주 발생하는 곳이기 때문에 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적이었을 것입니다.<br><br>- 따라서 외장재의 트렌드가 어떻게 변해갔는지 알아보면 좋을 것 같아서 이 주제를 선택하게 되었습니다. |
 
 
 
 ## row {height=210px}
 ::: {.card title="**외장재 소재 선택의 중요성**"}
 - 경제: 기술 발전에 따른 비용 감소, 고효율성
-- 정책: 환경 규제에 따른 외장재 선택의 변화
 - 디자인: 전통적/현대적 선호도 차이
 - 기후: Ames 지역의 홍수 문제
 - 지역개발 및 투자 기회
 :::
 
-## row
-### Column {width=25%}
-<img src="img/1944flood_paper1a.jpg" style="height:200px;">
+## row 
 
-### Column {width=25%}
-<img src="img/1944flood8.jpg" style="height:200px;">
+### Column {width=50%}
+<img src="img/1944flood_paper1a.jpg" style="height:485px;">
 
 ### Column {width=25%}
 <img src="img/1975-06-26.png" style="height:200px;">
 
+{{< video https://youtu.be/0OZwRJlPvLA?si=Iu_K7_8HE0_GZ910 title='1993' >}}
+
 ### Column {width=25%}
 <img src="img/1990-06-18.png" style="height:200px;">
 
-## row
-### Column {width=50%}
-{{< video https://youtu.be/0OZwRJlPvLA?si=Iu_K7_8HE0_GZ910 title='1993' >}}
-
-### Column {width=50%}
 {{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
 
-
-# 트렌드 분석
+# 트랜드 분석
 
 ## row
 ```{python}
@@ -236,7 +223,7 @@ display(HTML('<iframe src="graph/map_exterior_1111.html" height="400px"; ></ifra
 ## row
 ### Column {width=75%}
 ```{python}
-#| title: 10년단위 트렌드 변화
+#| title: 10년단위 트랜드 변화
 display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe>'))
 ```
 
@@ -249,6 +236,116 @@ display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe
 - 미국 부동산 시장의 버블 형성과 함께 대출 기준이 매우 느슨해졌던 시기였다.
 
 🔎 건축수가 가장 많은 2000년대를 집중 탐구해보기로 결정!
+
+:::
+
+# 주요 외장재 특징
+
+## row
+```{python}
+#| title: 10년대별 외장재 트랜드
+display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></iframe>'))
+```
+
+## row {height=70px}
+
+### Column {width=25%}
+**1900년대 ~ 1950년대**
+
+### Column {width=25%}
+**1960년대 ~ 1980년대**
+
+### Column {width=25%}
+**1990년대 ~ 2000년대**
+
+### Column {width=25%}
+**2010년대 이후**
+
+## row 
+
+### Column {width=25%} {.tabset}
+
+::: {.card title="Wd Sdng"}
+<img src="img/Wd Sdng.png" style="height:250px;">
+
+- 환경 친화적인 소재이며, 자연스러운 목재의 느낌이 고급스러운 분위기를 자아낸다.
+
+- 여러 종류의 목재와 마감처리로 다양한 외관을 구현할 수 있다.
+
+- 그러나 목재는 주기적인 페인트, 스테인 처리가 필요하며 습기와 해충에 취약할 수 있다.
+:::
+
+::: {.card title="MetalSd"}
+<img src="img/MetalSd.png" style="height:250px;">
+
+- 금속 특성상 부식과 해충에 강하며, 극한의 날씨에서도 잘 견딘다.
+
+- 녹슬지 않는 금속은 유지보수가 덜 필요하며, 오랜 기간동안 외관을 유지할 수 있다.
+
+- 그러나 초기비용이 높고, 설치가 다소 복잡하다.
+:::
+
+
+### Column {width=25%} {.tabset}
+
+::: {.card title="HdBoard"}
+<img src="img/HdBoard.png" style="height:250px;">
+
+- 하드보드는 쉽게 절단, 가공할 수 있어 다양한 디자인에 맞출 수 있다.
+
+- 다른 천연 목재에 비해 저렴한 편이다.
+
+- 그러나 습기에 노출될 경우 팽창하거나 변형될 수 있어 주기적인 유지 보수가 필요하다.
+
+:::
+
+::: {.card title="Plywood"}
+<img src="img/Plywood.png" style="height:250px;">
+
+- 결을 교차시켜 압착한 구조덕분에 강도와 내구성이 뛰어나고 뒤틀림이 적다.
+
+- 천연 목재에 비해 저렴한 편이며, 재활용이 가능하여 환경 친화적이다.
+
+- 절단, 드릴링 등 다양한 가공 작업에 용이하다.
+
+- 그러나 습기에 노출되면  부풀거나 손상될 수 있어 방수처리가 필수적이다.
+:::
+
+### Column {width=25%} {.tabset}
+
+::: {.card title="VinylSd"}
+<img src="img/VinylSd.png" style="height:250px;">
+
+- 습기와 해충에 강해 오랜 시간 유지된다
+
+- 쉽게 청소할 수 있으며, 페인트가 벗겨지거나 갈라질 염려가 거의 없다.
+
+- 설치가 비교적 쉽고, 페인트가 벗겨질 염려가 없다.
+
+- 그러나 외관상 인공적인 느낌으로 인해 선호도가 떨어진다.
+
+:::
+
+::: {.card title="CemntBd"}
+<img src="img/CemntBd.png" style="height:250px;">
+
+- 주로 시멘트와 모래로 구성되어 있으며, 강화 섬유가 포함되지 않은 경우가 많다. 이로 인해 상대적으로 더 무겁고 단단한 특성을 가집니다.
+
+- 페인트가 잘 벗겨지지 않으며, 유지보수 비용이 적게 든다.
+
+- 그러나 시멘트 보드는 무거워 설치가 어려울 수 있고, 전문시공이 필요하다.
+
+:::
+### Column {width=25%} {.tabset}
+
+::: {.card title="Fiber Cement Siding"}
+<img src="img/what-is-fiber-cement.png" style="height:250px;">
+
+- 시멘트, 모래, 셀룰로스 섬유 및 기타 재료가 혼합되어 만들어진다. 섬유가 포함되어 있어 유연성과 내구성이 향상된다.
+
+- 섬유 시멘트 보드는 시멘트 보드보다 더 우수한 유연성과 내구성, 습기 저항성을 제공한다.
+
+- 가볍고 설치가 쉬우며, 유지 관리가 간편하다.
 
 :::
 
@@ -374,153 +471,8 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 <img src="img/CemntBd_house.png" style="height:250px;">
 :::
 
-# 주요 외장재 특징
-
-## row
-### Column {width=33%}
-::: {.card title="VinylSd"}
-<img src="img/VinylSd.png" style="height:250px;">
-
-- 습기와 해충에 강해 오랜 시간 유지된다
-
-- 쉽게 청소할 수 있으며, 페인트가 벗겨지거나 갈라질 염려가 거의 없다.
-
-- 설치가 비교적 쉽고, 페인트가 벗겨질 염려가 없다.
-
-- 그러나 외관상 인공적인 느낌으로 인해 선호도가 떨어진다.
-
-:::
-
-### Column {width=33%}
-::: {.card title="MetalSd"}
-<img src="img/MetalSd.png" style="height:250px;">
-
-- 금속 특성상 부식과 해충에 강하며, 극한의 날씨에서도 잘 견딘다.
-
-- 녹슬지 않는 금속은 유지보수가 덜 필요하며, 오랜 기간동안 외관을 유지할 수 있다.
-
-- 그러나 초기비용이 높고, 설치가 다소 복잡하다.
-:::
-
-### Column {width=33%}
-::: {.card title="HdBoard"}
-<img src="img/HdBoard.png" style="height:250px;">
-
-- 하드보드는 쉽게 절단, 가공할 수 있어 다양한 디자인에 맞출 수 있다.
-
-- 다른 천연 목재에 비해 저렴한 편이다.
-
-- 그러나 습기에 노출될 경우 팽창하거나 변형될 수 있어 주기적인 유지 보수가 필요하다.
-
-:::
-
-## row
-### Column {width=33%}
-::: {.card title="Wd Sdng"}
-<img src="img/Wd Sdng.png" style="height:250px;">
-
-- 환경 친화적인 소재이며, 자연스러운 목재의 느낌이 고급스러운 분위기를 자아낸다.
-
-- 여러 종류의 목재와 마감처리로 다양한 외관을 구현할 수 있다.
-
-- 그러나 목재는 주기적인 페인트, 스테인 처리가 필요하며 습기와 해충에 취약할 수 있다.
-:::
-
-
-### Column {width=33%}
-::: {.card title="Plywood"}
-<img src="img/Plywood.png" style="height:250px;">
-
-- 결을 교차시켜 압착한 구조덕분에 강도와 내구성이 뛰어나고 뒤틀림이 적다.
-
-- 천연 목재에 비해 저렴한 편이며, 재활용이 가능하여 환경 친화적이다.
-
-- 절단, 드릴링 등 다양한 가공 작업에 용이하다.
-
-- 그러나 습기에 노출되면  부풀거나 손상될 수 있어 방수처리가 필수적이다.
-:::
-
-
-### Column {width=33%}
-::: {.card title="CemntBd"}
-<img src="img/CemntBd.png" style="height:250px;">
-
-- 주로 시멘트와 모래로 구성되어 있으며, 강화 섬유가 포함되지 않은 경우가 많다. 이로 인해 상대적으로 더 무겁고 단단한 특성을 가집니다.
-
-- 페인트가 잘 벗겨지지 않으며, 유지보수 비용이 적게 든다.
-
-- 그러나 시멘트 보드는 무거워 설치가 어려울 수 있고, 전문시공이 필요하다.
-
-:::
-
-## row
-
-### Column {width=33%}
-::: {.card title="Fiber Cement Siding"}
-<img src="img/what-is-fiber-cement.png" style="height:250px;">
-
-- 시멘트, 모래, 셀룰로스 섬유 및 기타 재료가 혼합되어 만들어진다. 섬유가 포함되어 있어 유연성과 내구성이 향상된다.
-
-- 섬유 시멘트 보드는 시멘트 보드보다 더 우수한 유연성과 내구성, 습기 저항성을 제공한다.
-
-- 가볍고 설치가 쉬우며, 유지 관리가 간편하다.
-
-:::
-
-### Column {width=75%}
-::: {.empty}
-:::
-
-
-:::
 
 # 결론
-
-## row
-```{python}
-#| title: 10년대별 외장재 트렌드
-display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></iframe>'))
-```
-
-## row
-
-**시대별 선호 외장재**
-
-## row {height=300px}
-
-### Column {width=25%}
-::: {.card title="1900 ~ 1950년대"}
-- WD Sdng
-- MetalSd
-:::
-### Column {width=25%}
-::: {.card title="1960 ~ 1980년대"}
-- HdBoard
-- Plywood
-
-:::
-### Column {width=25%}
-::: {.card title="1990 ~ 2000년대"}
-- VinylSd
-
--1960년대 VinylSd  vs 2000년대 VinylSd
-
-VinylSd은 1960년대 주택 외장재 시장에 진출했으나, 2000년대의 VinylSd와는 다름. 
-초기 VinylSd 출시 이후 지속적인 개발이 이루어져, 제품의 품질과 기능이 향상되었기 때문.
-
-- CemnBd
-
-:::
-
-### Column {width=25%}
-::: {.card title="2010년대 이후"}
-- Fiber Cement Siding
- 내구성, 방화성, 저유지보수성이 좋고, 목재의 외관을 모방하면서도 훨씬 더 오랜 기간 동안 유지되어 중고급 주택에서 많이 사용됨
-
-- VinylSd
-저렴하면서도 다양한 색상과 스타일을 제공하여, 주택 소유주들 사이에서 꾸준한 인기를 유지
-
-:::
 
 ## row
 
