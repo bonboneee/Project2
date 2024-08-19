@@ -354,7 +354,7 @@ display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></i
 ## row
 ```{python}
 #| content: valuebox
-#| title: "Total Built(▲446)"
+#| title: "Total Built(🔺446)"
 dict(
   icon = "building",
   color = "light",
@@ -363,7 +363,7 @@ dict(
 ```
 ```{python}
 #| content: valuebox
-#| title: "🥇 VinylSd(▲460)"
+#| title: "🥇 VinylSd(🔺460)"
 dict(
   icon = "emoji-kiss",
   color = "#FF6F61",
@@ -372,7 +372,7 @@ dict(
 ```
 ```{python}
 #| content: valuebox
-#| title: "🥈 CemntBd(▲57)"
+#| title: "🥈 CemntBd(🔺57)"
 dict(
   icon = "emoji-sunglasses",
   color = "#4DB6AC",
@@ -382,7 +382,7 @@ dict(
 
 ```{python}
 #| content: valuebox
-#| title: "🥉 MetalSd(▲28)"
+#| title: "🥉 MetalSd(🔺28)"
 dict(
   icon = "emoji-smile",
   color = "#6F9FD8",
@@ -406,10 +406,10 @@ dict(
 ### Column {width=70%}
 ```{python}
 #| title: 2000년대 건축 건물 외장재별 분포 현황 
-display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="600px"></iframe>'))
+display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="1000px"></iframe>'))
 ```
 
-### Column {width=30%} {.tabset}
+### Column {width=30%} {.tabset} 
 
 ::: {.card title="VinylSd"}
 ###### VinylSd 많은 동네 TOP5
@@ -425,6 +425,17 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 ###### [College_Creek 동네 구경하기](https://www.google.com/maps/@42.0167856,-93.6895449,3a,20.9y,334.74h,94.56t/data=!3m7!1e1!3m5!1spVgiygrqYkzz0lPK46h2Xw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DpVgiygrqYkzz0lPK46h2Xw%26cb_client%3Dmaps_sv.tactile.gps%26w%3D203%26h%3D100%26yaw%3D306.99847%26pitch%3D0%26thumbfov%3D100!7i16384!8i8192?coh=205409&entry=ttu)
 
 <img src="img/VinylSd_house.png" style="height:250px;">
+<br><br>
+
+###### "**🛠비닐사이딩을 쓰는 이유?**"
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
+
+- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
+
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
+
 :::
 
 ::: {.card title="MetalSd"}
@@ -441,6 +452,16 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 ###### [Somerset 동네 구경하기](https://www.google.com/maps/@42.0521924,-93.6438282,3a,24.2y,353.76h,93.87t/data=!3m6!1e1!3m4!1sjF6YtKpkorbDkQSeIgcbcw!2e0!7i16384!8i8192?coh=205409&entry=ttu)
 
 <img src="img/MetalSd_house.png" style="height:250px;">
+<br><br>
+
+###### "**🛠비닐사이딩을 쓰는 이유?**"
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
+
+- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
+
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
 :::
 
 ::: {.card title="HdBoard"}
@@ -454,6 +475,16 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 ###### [Edwards 동네 구경하기](https://www.google.com/maps/@42.0188757,-93.6723258,3a,41.4y,0.8h,96.35t/data=!3m6!1e1!3m4!1sC2n2w5Gaci36qa3YOnY1IQ!2e0!7i16384!8i8192?coh=205409&entry=ttu)
 
 <img src="img/HdBoard_house.png" style="height:300px;">
+<br><br>
+
+###### "**🛠비닐사이딩을 쓰는 이유?**"
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
+
+- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
+
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
 :::
 
 ::: {.card title="CemntBd"}
@@ -470,14 +501,9 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 ###### [Northridge_Heights 동네 구경하기](https://www.google.com/maps/place/42%C2%B003'43.0%22N+93%C2%B039'25.3%22W/@42.0621747,-93.6569774,3a,21.5y,177.23h,93.84t,0.06r/data=!3m6!1e1!3m4!1sUoyNRAFKFKO0dyr9UEwhMA!2e0!7i16384!8i8192!4m4!3m3!8m2!3d42.0619444!4d-93.6570278?coh=205409&entry=ttu)
 
 <img src="img/CemntBd_house.png" style="height:250px;">
-:::
+<br><br>
 
-# 결론
-
-## row
-
-### Column {width=50%}
-::: {.card title="내구성과 장점" class="card-title-3"}
+###### "🛠**비닐사이딩을 쓰는 이유?**"
 - <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
@@ -485,12 +511,16 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 - <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
 - <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
-
 :::
 
 
+# 결론
+
+## row
+
+
 ### Column {width=50%}
-::: {.card title="외장재 변화를 조사한 이유" class="card-title-3"}
+::: {.card title="🚧외장재 변화를 조사한 이유" class="card-title-3"}
 
 - <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**조사 대상**: Ames 사람들이 선호하는 외장재의 변화.</div>
 
