@@ -40,23 +40,18 @@ from IPython.display import display, HTML
 # {.sidebar}
 
 ## 조사목적
+- Ames 지역 주민들이 선호하는 외장재를 분석함으로써 인테리어 사업을 운영하는 회사에 소비자 니즈를 제공하기 위함이다.
 
-1. 외장재 소재 선택의 중요성
-- 경제: 기술 발전에 따른 비용 감소, 고효율성
-- 디자인: 전통적/현대적 선호도 차이
-- 기후: Ames 지역의 홍수 문제
-
-## 트랜드 분석
+## 트렌드 분석
 
 1. 연도별 외장재 종류별 건축수
-2. 연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
-3. 외장재 사용 빈도 TOP6 (100건이상 사용재료)
-4. 전체년도 외장재별 분포 현황
-5. 10년단위 트랜드 변화
+2. 외장재 사용 빈도 TOP6 (100건이상 사용재료)
+3. 연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
+4. 10년단위 트렌드 변화
 
 ## 주요 외장재 특징
 
-1. 10년대별 외장재 트랜드 선그래프
+1. 10년대별 외장재 트렌드 선그래프
 2. 10년대별 주요 외장재 특징
 
 
@@ -64,12 +59,13 @@ from IPython.display import display, HTML
 
 1. 2000년대 건축 건물 외장재별 분포 현황
 2. 2000년대 VinylSd 동네 TOP5 동네 구경하기
+3. 비닐사이딩을 쓰는 이유?
 
 
 ## 결론<img src="img/simpson.jpg" alt="화목한 심슨네 집" style="width: 25%;">
 
 1. 외장재 변화를 조사한 이유
-2. 외장재 트랜드 변화의 중요성
+2. 외장재 트렌드 변화의 중요성
 3. 결론
 4. 분석의 제한점
 
@@ -143,14 +139,6 @@ from IPython.display import display, HTML
 | - 이 이야기는 안전과 노력의 중요성을 강조하며, 각자의 방식으로 집을 짓는 것이 어떤 결과를 가져오는지를 보여줍니다. 셋째 아기돼지가 가장 잘 준비한 덕분에 결국 그들이 안전하다는 메시지가 담겨 있습니다.<br><br> - Ames지역은 심각한 홍수를 몇 번 겪었고, 그 외에도 계속 작은 홍수가 자주 발생하는 곳이기 때문에 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적이었을 것입니다.<br><br>- 따라서 외장재의 트렌드가 어떻게 변해갔는지 알아보면 좋을 것 같아서 이 주제를 선택하게 되었습니다. |
 
 
-
-## row {height=210px}
-::: {.card title="**✅외장재 소재 선택의 중요성**"}
-- 경제: 기술 발전에 따른 비용 감소, 고효율성
-- 디자인: 전통적/현대적 선호도 차이
-- 기후: Ames 지역의 홍수 문제
-:::
-
 ## row 
 ### Column {width=50%}
 ::: {.card title="**☑️️Ames의 끈질긴 고난, 홍수 관련 뉴스**"}
@@ -167,7 +155,7 @@ from IPython.display import display, HTML
 
 {{< video https://youtu.be/YQSnfvRw8mU?si=TqKmbNZ_94ArrFFf title='2010' >}}
 
-# 트랜드 분석
+# 트렌드 분석
 
 ## row
 ```{python}
@@ -177,12 +165,6 @@ display(HTML('<iframe src="graph/year_exterior.html" height="400px"; ></iframe>'
 
 ## row
 **❗겹치는 색이 많아 확인이 어렵다.**
-
-## row
-```{python}
-#| title: 🗂️연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
-display(HTML('<iframe src="graph/year_exterior_gray.html" height="400px"; ></iframe>'))
-```
 
 ## row
 ::: {.card title="🗂️외장재 사용 빈도 TOP6 (100건이상 사용재료)"}
@@ -200,35 +182,20 @@ display(HTML('<iframe src="graph/year_exterior_gray.html" height="400px"; ></ifr
 
 🔎 Exterior_1st와 Exterior_2nd의 순위가 1~6까지 동일하기 때문에 Exterior_1st 자료로만 분석을 진행하기로 결정!
 :::
-
-
 ## row
-### Column {width=75%}
 ```{python}
-#| title: 🗂️전체년도 외장재별 분포 현황
-display(HTML('<iframe src="graph/map_exterior_1111.html" height="400px"; ></iframe>'))
+#| title: 🗂️연도별 외장재 종류별 건축수(TOP6 외 회색 처리)
+display(HTML('<iframe src="graph/year_exterior_gray.html" height="400px"; ></iframe>'))
 ```
 
-### Column {width=25%}
-::: {.card title="**💡외장재별 동네 분포 차이**"}
 
-1. 새로 지어진 동네의 경우 당시 유행한 건축 재료를 사용할 가능 성이 높을 것이다.
 
-2. 최근에 유행한 외장재의 건수가 많은 동네가 새로 지어진 동네일 것이다.
-
-❗ 동네가 겹치는 부분이 있는 것으로 보아 데이터가 정확하지 않은 것 같다.
-
-❗ 해당 자료는 Ames전체 건축수가 아닌, 2000년대 초반에 판매된 일부 집에 대한 자료이기 때문에 정확도에 한계가 있다.
-
-🔎 특정 연도를 지도에 시각화 해보면 그 당시 어떤 동네가 생겼는지 확인 할 수 있지 않을까?
-
-:::
 
 
 ## row
 ### Column {width=75%}
 ```{python}
-#| title: 🗂️10년단위 트랜드 변화
+#| title: 🗂️10년단위 트렌드 변화
 display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe>'))
 ```
 
@@ -248,7 +215,7 @@ display(HTML('<iframe src="graph/decade_exterior.html" height="400px"; ></iframe
 
 ## row
 ```{python}
-#| title: 🗂️10년대별 외장재 트랜드
+#| title: 🗂️10년대별 외장재 트렌드
 display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></iframe>'))
 ```
 
@@ -443,13 +410,13 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 <br><br>
 
 ###### **🛠비닐사이딩을 쓰는 이유?**
-- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내후성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
 
 - <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
-- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식.</div>
 
 :::
 
@@ -469,14 +436,14 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 <img src="img/CemntBd_house.png" style="height:250px;">
 <br><br>
 
-###### 🛠**비닐사이딩을 쓰는 이유?**
-- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+###### **🛠비닐사이딩을 쓰는 이유?**
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내후성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
 
 - <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
-- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식.</div>
 :::
 
 ::: {.card title="MetalSd"}
@@ -496,13 +463,13 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 <br><br>
 
 ###### **🛠비닐사이딩을 쓰는 이유?**
-- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내후성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
 
 - <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
-- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식.</div>
 :::
 
 ::: {.card title="HdBoard"}
@@ -519,13 +486,13 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 <br><br>
 
 ###### **🛠비닐사이딩을 쓰는 이유?**
-- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내후성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
 
 - <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
-- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식.</div>
 :::
 
 
@@ -542,23 +509,32 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="10
 - <div style="background-color: #F4F4FB; padding: 10px; border-radius: 5px;">**적용 가능성**: 이 연구 결과는 Ames 지역뿐만 아니라 유사한 기후와 환경을 가진 다른 지역에서도 활용할 수 있다.</div>
 :::
 
+
 ## row
-::: {.card title="**✍️외장재 트렌드 변화의 중요성**" class="card-title-3" height=300px}
+::: {.card title="**✍️외장재 트렌드 변화 파악의 중요성**" class="card-title-3" height=280px}
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">트렌드 인사이트: 소비자들의 외장재 선택 트렌드를 파악함으로써, 향후 시장 전망에 대한 통찰을 제공한다.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">기후 변화: 지역의 기후 변화에 따라 외장재 선택이 달라지며, 자연재해에 효과적으로 대응할 수 있는 외장재의 중요성이 증가한다.</div>
 
-- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">기술 발전: 새로운 기술의 도입으로 효율적이고 지속 가능한 외장재가 개발되고 있으며, 이러한 변화에 대한 이해는 필수적이다.</div>
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">기술 발전: 새로운 기술의 도입으로 효율적이고 지속 가능한 외장재가 개발되고 있으므로 이러한 변화에 대한 이해는 필수적이다.</div>
 
 - <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">투자 가치: 외장재 선택은 건물의 전체적인 가치와 시장성을 결정짓는 중요한 요소로, 트렌드를 잘 분석하고 반영하는 것이 장기적인 투자 가치를 높이는 데 기여한다.</div>
 :::
 
 ## row
-::: {.card title="**✍️결론**" class="card-title-3" height=150px}
-- <div style="background-color: #FFF5F5; padding: 10px; border-radius: 5px;">결론은 Ames 지역의 외장재 트랜드 변화를 분석함으로써 인테리어 및 건축 사업에 중요한 통찰을 제공하며, 기술 발전, 기후 변화, 경제적 요인 등이 외장재 선택에 중요한 영향을 미친다는 것입니다.</div>
+::: {.card title="**✍️결론 및 분석의 기대효과**" class="card-title-3" height=250px}
+- <div style="background-color: #FFF5F5; padding: 10px; border-radius: 5px;">앞의 분석을 통해 2000년대, 2010년대 최고의 유행 외장재는 각각 비닐사이딩과 섬유 시멘트로 밝혀진 바 있다.</div>
+
+- <div style="background-color: #FFF5F5; padding: 10px; border-radius: 5px;">두 개의 외장재가 가진 성질의 공통점은 물과 습기에 강하고, 믿을만한 내구성, 경제력 있는 가격대 그리고 친환경적인 소재라는 점이다.</div>
+
+- <div style="background-color: #FFF5F5; padding: 10px; border-radius: 5px;">Ames 지역의 외장재 트렌드 변화를 살펴봄으로써 인테리어 및 건축 사업자에게 소비자의 니즈를 충족시킬 인사이트를 제공할 수 있으며 Ames 사람들은 니즈를 충족시킬 수 있는 최신 외장재를 구매할 수 있다.</div>
 :::
 
 ## row
-::: {.card title="**✍분석의 제한점**" class="card-title-3" height=150px}
-- <div style="background-color: #F0F4F1; padding: 10px; border-radius: 5px;">에임즈만을 바탕으로 한 데이터셋을 사용했기 때문에 미국의 모든 홍수 유의 지역에 일반화하기 어렵다.</div>
+::: {.card title="**✍분석의 제한점**" class="card-title-3" height=300px}
+- <div style="background-color: #F0F4F1; padding: 10px; border-radius: 5px;">2010년대의 데이터 수가 상대적으로 너무나 작기 때문에 Ames 외장재의 최신 트렌드를 일반화시키기 어렵다.</div>
+
+- <div style="background-color: #F0F4F1; padding: 10px; border-radius: 5px;">Ames 동네 구획이 겹치는 부분이 있는 것으로 보아 데이터가 정확하지 않은 것 같다.</div>
+
+- <div style="background-color: #F0F4F1; padding: 10px; border-radius: 5px;">Ames전체 건축수가 아닌, 2000년대 초반에 판매된 일부 집에 대한 자료이기 때문에 정확도에 한계가 있다.</div>
 :::
