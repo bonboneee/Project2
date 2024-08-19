@@ -6,6 +6,7 @@ format:
     theme: Simplex
     scrolling: True
     logo: "img/teletobi.jpg"
+    css: style.css
     nav-buttons:
       - icon: github
         href: https://github.com/bonboneee/Project2
@@ -133,7 +134,7 @@ from IPython.display import display, HTML
 - Ames 지역은 홍수가 빈번하게 발생하는 곳으로, 주민들의 안전과 재산 보호를 위해 홍수에 강한 주택 건설이 필수적입니다. 이는 "아기돼지 삼형제"의 이야기가 교훈을 주듯, 튼튼한 집을 짓는 것이 얼마나 중요한지를 상기 시킵니다.
 ![아기돼지 삼형제](img/pigs.jpg)
 
-### Column {width=50%}
+## row {height=210px}
 ::: {.card title="**외장재 소재 선택의 중요성**"}
 - 경제: 기술 발전에 따른 비용 감소, 고효율성
 - 정책: 환경 규제에 따른 외장재 선택의 변화
@@ -206,9 +207,10 @@ display(HTML('<iframe src="graph/map_exterior_1111.html" height="400px"; ></ifra
 ```
 
 ### Column {width=25%}
-::: {.card title="외장재별 동네 분포 차이"}
+::: {.card title="**💡외장재별 동네 분포 차이**"}
 
 1. 새로 지어진 동네의 경우 당시 유행한 건축 재료를 사용할 가능 성이 높을 것이다.
+
 2. 최근에 유행한 외장재의 건수가 많은 동네가 새로 지어진 동네일 것이다.
 
 ❗ 동네가 겹치는 부분이 있는 것으로 보아 데이터가 정확하지 않은 것 같다.
@@ -475,7 +477,7 @@ display(HTML('<iframe src="graph/decade_exterior_line.html" height="400px"; ></i
 
 **시대별 선호 외장재**
 
-## row
+## row {height=300px}
 
 ### Column {width=25%}
 ::: {.card title="1900 ~ 1950년대"}

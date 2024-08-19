@@ -1,0 +1,6 @@
+.card-title-1 {
+    background-color: #007BFF; /* 첫 번째 카드 제목 박스 배경색 */
+    color: white; /* 제목 텍스트 색상 */
+    padding: 10px; /* 제목 박스 내부 여백 */
+    font-weight: bold; /* 제목 글씨 굵기 */
+}
