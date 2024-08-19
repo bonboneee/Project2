@@ -21,12 +21,13 @@ format:
 ---
 <style>
 .navbar {
-    background: linear-gradient(to right, #E1BEE7, #FFEB3B, #FFCDD2, #C8E6C9);
+    background: linear-gradient(to right, #E1BEE7, #FFF9C4, #FFCDD2, #C8E6C9);
 }
 
 .navbar .active {
-background: linear-gradient(to right, #D1C4E9, #FFF59D, #FFABAB, #A5D6A7);
+    background: #F5F5DC !important; /* 연한 베이지로 변경 및 우선 적용 */
 }
+
 </style>
 
 ```{python}
@@ -471,56 +472,33 @@ display(HTML('<iframe src="graph/map_exterior_2000.html" width="100%" height="60
 <img src="img/CemntBd_house.png" style="height:250px;">
 :::
 
-
 # 결론
 
 ## row
 
 ### Column {width=50%}
-::: {.card title="사람들이 VinylSD를 쓰는 이유" class="card-title-3"}
-- **내구성과 유지 관리**
+::: {.card title="내구성과 장점" class="card-title-3"}
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**내구성과 유지 관리**: 내후성이 뛰어나고 오랜 사용이 가능. 정기적인 교체 필요 없음, 폐기물 감소.</div>
 
-내후성이 뛰어나고 오랜 사용이 가능.
-정기적인 교체 필요 없음, 폐기물 감소.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**환경적 장점**: 생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음. <br>: 재활용 가능, 환경적 영향 최소화. 유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.</div>
 
-- **환경적 장점**
+- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**비용 효율성**: 단열 비닐 사이딩으로 에너지 효율성 향상. 난방 및 냉방 비용 절감.</div>
 
-생산 과정에서 에너지 소비와 온실가스 배출이 상대적으로 적음.
-재활용 가능, 환경적 영향 최소화.
-
-유지 관리에 필요한 화학 물질 사용이 적어 환경에 미치는 영향을 줄임.
-
-- **비용 효율성**
-
-단열 비닐 사이딩으로 에너지 효율성 향상.
-난방 및 냉방 비용 절감.
-
-- **주택 가치 향상**
-
-잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식.
-보증이 새 소유자에게 양도 가능.
-
-
-*내후성: 각종 기후에 견디는 성질
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**주택 가치 향상**: 잠재적 구매자에게 오랜 기간 유지할 수 있는 외장재로 인식. 보증이 새 소유자에게 양도 가능.</div>
 
 :::
+
 
 ### Column {width=50%}
 ::: {.card title="외장재 변화를 조사한 이유" class="card-title-3"}
 
-- **조사 대상**
+- <div style="background-color: #EDE7F6; padding: 10px; border-radius: 5px;">**조사 대상**: Ames 사람들이 선호하는 외장재의 변화.</div>
 
-Ames 사람들이 선호하는 외장재의 변화.
+- <div style="background-color: #FFFDE7; padding: 10px; border-radius: 5px;">**목적**: 인테리어 사업을 하는 회사에 도움 제공.</div>
 
-- **목적**
+- <div style="background-color: #FFEBEE; padding: 10px; border-radius: 5px;">**적용 가능성**: Ames 주민뿐만 아니라 비슷한 환경의 다른 지역에서도 유용.</div>
 
-인테리어 사업을 하는 회사에 도움 제공.
+- <div style="background-color: #E8F5E9; padding: 10px; border-radius: 5px;">**트렌드 인사이트**: 앞으로 사람들이 외장재를 선택하는 트렌드에 대한 인사이트 제공.</div>
 
-- **적용 가능성**
-
-Ames 주민뿐만 아니라 비슷한 환경의 다른 지역에서도 유용.
-
-- **트렌드 인사이트**
-
-앞으로 사람들이 외장재를 선택하는 트렌드에 대한 인사이트 제공.
 :::
+
